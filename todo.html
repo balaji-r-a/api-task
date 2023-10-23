@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- header -->
+  <nav class="navbar bg-primary  navbar-expand-lg bg-black border-bottom mb-5 position-sticky top-0 z-3 " data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white ms-3 fw-bold " href="#">App programing interface</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4 ">
+          <li class="nav-item">
+            <a class="nav-link text-white ms-3" href="#"><button class="btn btn-outline-primary text-white" type="submit">Home</button></a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link text-white " href="index.html"><button class="btn btn-outline-primary text-white" type="submit">Log in</button></a>
+          </li>
+          <li class="nav-item ms-3 me-5">
+            <a class="nav-link text-white " href="register.html"><button class="btn btn-outline-primary text-white" type="submit">Sign up</button></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+     <!-- main -->
+  <div class="container" id="con">
+    <h2 class="mb-5 text-center ">User Reviews</h2>
+    <div class="row">
+      <div id="showCard" class="col-lg-12 col-md-12 col-12 p-0 ">
+        <div class="card text-bg-primary mb-3 ms-1" style="max-width: 100%;" id="card">
+          <div class="card-header row">
+            <div class="col-12 d-flex align-items-center" id="con1">
+              <i class="fa fa-user text-white me-1" id="icon"></i>
+              <p class="mb-0" id="name">Name</p>
+            </div>
+            <div class="col-12 d-flex align-items-center" id="con1">
+              <i class="fa fa-envelope me-1 text-white" id="icon"></i>
+              <p class="mb-0" id="email">Email</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-title fw-medium" id="review">Review :</p>
+            <p class="card-text" id="comment">Description</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="container">
+    <footer class="py-3 my-4 position-sticky bottom-0 ">
+      <ul class="nav justify-content-center border-top pb-3 mb-1">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white "><i class="fa fa-envelope me-3 text-primary "></i>appinterfacepro@gmail.com</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white  "><i class="fa fa-phone me-3 text-primary "></i>+91 8945045623</a></li>
+      </ul>
+      <p class="text-center">© 2023 Copyrights, Inc</p>
+    </footer>
+  </div>
+
+
+  
+
+  <script src="api.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!--     
+   <div class="container">
+    <form action="" id="form">
+        <div id="wrapper">
+            <h1>Todo List</h1>
+            <div class="input-grup">
+            <input type="text" id="input">
+            <button id="add">Add</button>
+            <div class="todo">
+                <ol  id="todoList"></ol>
+            </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <p style="color: maroon;"><b>Note:</b> Task complete ToDos list Just one click the todo </p>
+            <p style="color: maroon;" ><b>Note:</b> Remove ToDos list Just Double click the todo </p>
+        </div>
+        <div class="text-center">
+            <p>Go to <span><a href="index.html">HOME</a></span>
+        </div>
+
+    </form>
+   </div>
+   <script>
+    let button = document.getElementById('add');
+let todoList = document.getElementById('todoList');
+let input = document.getElementById('input');
+let list = document.getElementById("todoList");
+        
+//local storage,cookies
+let todos = [];
+window.onload = ()=>{
+    todos = JSON.parse(localStorage.getItem('todos')) || []
+    todos.forEach(todo=>addtodo(todo))
+}
+
+button.addEventListener('click',()=>{
+    todos.push(input.value)
+    localStorage.setItem('todos',JSON.stringify(todos))
+    addtodo(input.value)
+    input.value=''
+})
+
+function addtodo(todo){
+    let para = document.createElement('li');
+    para.innerText = todo;
+    todoList.appendChild(para)
+    
+    para.addEventListener('click',()=>{
+        para.style.textDecoration = 'line-through'
+        remove(todo)
+    })
+    para.addEventListener('dblclick',()=>{
+        todoList.removeChild(para)
+        remove(todo)
+    })
+}
+
+function remove(todo){
+    let index = todos.indexOf(todo)
+    if (index > -1) {
+        todos.splice(index, 1);
+      }
+    localStorage.setItem('todos',JSON.stringify(todos))
+}
+    
+   </script> -->
+</body>
+</html>
